@@ -8,7 +8,7 @@ RSpec.describe "Authors", type: :request do
   describe "POST /authors" do
     context "with valid author params" do
       let!(:author_params) { { name: 'S. Bro', email: 'bro@sbahj.info' } }
-  
+      
       it 'creates a new author' do
         expect { post '/authors', params: author_params }.to change(Author, :count).by(1)
       end
